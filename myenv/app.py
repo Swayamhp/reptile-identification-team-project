@@ -7,7 +7,7 @@ from PIL import Image
 app = Flask(__name__)
 
 # ✅ Load the trained model
-MODEL_PATH = "full_model.h5"
+MODEL_PATH = os.path.join(os.getcwd(), "full_model.h5")
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # ✅ Define class labels
